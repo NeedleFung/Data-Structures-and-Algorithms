@@ -15,11 +15,11 @@ vector<int> SortCharacters(const string& str) {
     vector<int> order(S);
     vector<int> count(95, 0);
     for (int i = 0; i < S; ++i)
-        count[str[i] - '!']++;
+        count[str[i] - ' ']++;
     for (int j = 1; j < 95; ++j)
         count[j] += count[j - 1];
     for (int i = S - 1; i >= 0; --i) {
-        int c = str[i] - '!';
+        int c = str[i] - ' ';
         count[c]--;
         order[count[c]] = i;
     }
