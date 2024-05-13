@@ -11,10 +11,6 @@ int IterationLCS2(std::vector<long long> &seq1, std::vector<long long> &seq2)
     int n = seq2.size();
 
     std::vector<std::vector<int>> dp(m + 1, std::vector<int>(n + 1, 0));
-    for(int i = 0; i <= m; i++)
-        dp[i][0] = 0;
-    for(int i = 0; i <= n; i++)
-        dp[0][i] = 0;
 
     for(int i = 1; i <= m; i++)
         for(int j = 1; j <= n; j++)
